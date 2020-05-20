@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: false,
+  api: 'https://student-crud-server.herokuapp.com'
 };

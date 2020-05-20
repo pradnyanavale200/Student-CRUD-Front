@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -8,7 +9,8 @@ import { Router } from '@angular/router';
 
 export class AuthenticationService {
 
-  authApi = 'https://student-crud-server.herokuapp.com/user';
+
+  authApi = `${environment.api}/user`;
 
   constructor(
     private http: HttpClient,
@@ -16,15 +18,15 @@ export class AuthenticationService {
   ) { }
 
   adminLogin(data) {
-    return this.http.post(this.authApi + '/login', data);
+    return this.http.post(`${this.authApi}/login`, data);
   }
 
   adminRegister(data) {
-    return this.http.post(this.authApi + '/signup', data);
+    return this.http.post(`${this.authApi}/signup`, data);
   }
 
   forgetPassword(data) {
-    return this.http.post(this.authApi + '/forgetpassword', data);
+    return this.http.post(`${this.authApi}/forgetpassword`, data);
   }
 
   loggedIn() {
