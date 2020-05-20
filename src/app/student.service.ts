@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class StudentService {
 
-  studentApi = 'http://localhost:3000/student';
+  studentApi = 'https://student-crud-server.herokuapp.com/student';
 
   constructor(
     private http: HttpClient

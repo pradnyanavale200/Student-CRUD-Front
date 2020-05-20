@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 
 export class AuthenticationService {
 
-  authApi = 'http://localhost:3000/user';
+  authApi = 'https://student-crud-server.herokuapp.com/user';
 
   constructor(
     private http: HttpClient,
